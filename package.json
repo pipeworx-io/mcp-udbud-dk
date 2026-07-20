@@ -1,0 +1,20 @@
+{
+  "name": "@pipeworx/mcp-udbud-dk",
+  "version": "0.1.0",
+  "description": "Udbud.dk MCP — Danish government public procurement notices (keyless).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "udbud-dk"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pipeworx-io/mcp-udbud-dk"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
