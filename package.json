@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-udbud-dk",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Udbud.dk MCP — Danish government public procurement notices (keyless).",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-udbud-dk": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "udbud-dk"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-udbud-dk.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/udbud-dk",
   "pipeworx": {
-    "sourceHash": "v1-5d43d468ed59d10f1bea889c7f867940170eb25916c050822cb069890036e5d3",
-    "sourceCommit": "b0fb3c31386cf0256dcf1e2f1b3440435a87ec35"
+    "mode": "gateway",
+    "slug": "udbud-dk",
+    "gatewaySlug": "udbud-dk",
+    "sourceHash": "v1-f9758166c8b68c0f34f9575a8ec7fe27b9a8a324503070a62b7c8d6107e5e678",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }
